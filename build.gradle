@@ -1,0 +1,41 @@
+plugins {
+    id 'java'
+}
+
+group = 'systems.loreto'
+version = '1.0-SNAPSHOT'
+
+sourceCompatibility = 17
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'javax:javaee-api:8.0'
+    implementation 'javax.servlet:javax.servlet-api:4.0.1'
+    implementation 'javax.servlet:jstl:1.2'
+
+    implementation 'jakarta.servlet:jakarta.servlet-api:6.0.0'
+
+    implementation 'org.slf4j:slf4j-api:2.0.7'
+    testImplementation 'org.slf4j:slf4j-log4j12:2.0.7'
+
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.13.4.1'
+    implementation 'com.fasterxml.jackson:jackson-bom:2.15.2'
+
+    implementation 'org.apache.commons:commons-lang3:3.12.0'
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.13.4.1'
+    implementation 'org.hibernate:hibernate-core:5.6.1.Final'
+    implementation 'mysql:mysql-connector-java:8.0.33'
+
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.9.3'
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.9.3'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.9.3'
+    testImplementation 'org.mockito:mockito-core:4.1.0'
+}
+
+
+test {
+    useJUnitPlatform()
+}
